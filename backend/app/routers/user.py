@@ -53,6 +53,13 @@ async def get_user(user_id: int):
         raise HTTPException(404, "User not found")
     return user
 
+@router.get("/email/{user_id}", response_model=UserRead)
+async def get_user_email(user_id: str):
+    user = await User.prisma().find_unique(where={"eemail": user_id})
+    if not user:
+        raise HTTPException(404, "User not found")
+    return user
+
 @router.patch("/{user_id}", response_model=UserRead)
 async def update_user(user_id: int, payload: UserUpdate):
     """
