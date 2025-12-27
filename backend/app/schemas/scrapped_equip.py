@@ -1,6 +1,6 @@
 from datetime import datetime
 from pydantic import BaseModel
-from app.models.base import ORMBase
+from app.schemas.base import ORMBase
 
 class ScrappedEquipmentCreate(BaseModel):
     equipmentId: int
