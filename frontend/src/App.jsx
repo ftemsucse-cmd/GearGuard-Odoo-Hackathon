@@ -1,18 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import React from 'react';;
+import './App.css';
+import GearGaurd from './pages/GearGuardLanding.jsx';
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <div>
-      <h1 className='bg-red-300'>hwllo</h1>
+    <div className="App min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      <GearGaurd />
     </div>
-         </>
-  )
+  );
 }
 
-export default App
+export default App;
