@@ -1,8 +1,8 @@
 from datetime import datetime
 from typing import Optional
 from pydantic import BaseModel, Field
-from app.models.enums import MaintenanceType, RequestStage
-from app.models.base import ORMBase
+from app.schemas.enums import MaintenanceType, RequestStage
+from app.schemas.base import ORMBase
 
 class MaintenanceRequestCreate(BaseModel):
     createdById: int

@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional
 from pydantic import BaseModel
-from app.models.base import ORMBase
+from app.schemas.base import ORMBase
 
 class DepartmentCreate(BaseModel):
     name: str
